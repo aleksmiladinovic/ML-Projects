@@ -36,11 +36,11 @@ def read_data():
     x = []
     y = []
     imgs = []
-    for i in range(8):
+    for i in range(2):
         with open('data'+str(i)+'.aca', 'rb') as f, open('data description'+str(i)+'.aca', 'rb') as fd:
             n = pickle.load(f)
             imgs = pickle.load(f)
-            for j in range(int(n/2)):
+            for j in range(n):
                 x.append(pickle.load(f))
                 y.append(pickle.load(fd))
     l = len(x)
@@ -199,8 +199,8 @@ def plot_classification(train_loss, train_accuracies, val_loss, val_accuracies):
     train_epochs = len(train_loss)
     val_epochs = len(val_loss)
 
-    plt1 = plt.subplot2grid((10, 10), (0, 0), colspan=5, rowspan=5)
-    plt2 = plt.subplot2grid((10, 10), (0, 7), colspan=5, rowspan=5)
+    plt1 = plt.subplot2grid((6, 12), (0, 0), colspan=5, rowspan=5)
+    plt2 = plt.subplot2grid((6, 12), (0, 6), colspan=5, rowspan=5)
 
     plt1.set_title('Loss over epochs')
     plt1.plot(np.arange(1, train_epochs+1), train_loss, color='b', label='train set')
