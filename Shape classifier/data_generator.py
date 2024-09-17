@@ -1,49 +1,14 @@
 from matplotlib import pyplot as plt
-#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-#from matplotlib.figure import Figure
 import random
 import math
 import numpy as np
 import pickle
 
-'''
-x = np.array([i for i in range(5)])
-y = x**2
-
-img = plt.imread('pic.png')
-print(type(img)) #class numpy.ndarray
-print(img.shape)
-
-plt.scatter(x, y)
-plt.axis('off')
-
-fig = plt.figure()
-fig.bbox_inches = 'tight'
-'''
-
-
-'''
-with open('fajl','wb') as f:
-    a = np.array([[1,2],[3,4]])
-    b = np.array([4,5,6])
-
-    pickle.dump(a.flatten(),f)
-    pickle.dump(b,f)
-    f.close()
-
-with open('fajl','rb') as f:
-    ab = pickle.load(f)
-    ab2 = pickle.load(f)
-    print(ab)
-    print(ab2)
-'''
-
 
 N = 5000
 shapes = ['rectangle', 'circle', 'triangle']
 
-with open("ndata description.aca","wb") as fd, open("ndata.aca","wb") as f:
-    #img_size = [39, 52, 4]
+with open("data description.aca","wb") as fd, open("data.aca","wb") as f:
     img_size = [26, 35, 4]
     pickle.dump(N,f)
     pickle.dump(img_size,f)
@@ -98,9 +63,6 @@ with open("ndata description.aca","wb") as fd, open("ndata.aca","wb") as f:
         img = plt.imread('pic.png')
         gap = 15
         img_new = np.asarray([[[x for x in list(img[i,j,:])] for j in range(0,img.shape[1],gap)] for i in range(0,img.shape[0],gap)])
-
-        #print(img.shape)
-        #print(img_new.shape)
 
         pickle.dump(img_new.flatten(), f)
         pickle.dump(shapes[img_type], fd)
