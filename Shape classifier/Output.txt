@@ -1,0 +1,59 @@
+Epoch [1/10], Train loss: 13.8940, Train accuracy: 0.9144
+Epoch [2/10], Train loss: 1.5574, Train accuracy: 0.9936
+Epoch [3/10], Train loss: 0.7642, Train accuracy: 0.9969
+Epoch [4/10], Train loss: 0.8373, Train accuracy: 0.9961
+Epoch [5/10], Train loss: 0.3830, Train accuracy: 0.9981
+Epoch [6/10], Train loss: 0.3161, Train accuracy: 0.9983
+Epoch [7/10], Train loss: 0.1876, Train accuracy: 0.9992
+Epoch [8/10], Train loss: 0.0953, Train accuracy: 0.9997
+Epoch [9/10], Train loss: 0.1472, Train accuracy: 0.9995
+Epoch [10/10], Train loss: 0.8159, Train accuracy: 0.9969
+Epoch [1/10], Validation loss: 1.0627, Validation accuracy: 0.9962
+Epoch [2/10], Validation loss: 0.2845, Validation accuracy: 0.9994
+Epoch [3/10], Validation loss: 0.1997, Validation accuracy: 1.0000
+Epoch [4/10], Validation loss: 0.0528, Validation accuracy: 1.0000
+Epoch [5/10], Validation loss: 0.0453, Validation accuracy: 1.0000
+Epoch [6/10], Validation loss: 0.0182, Validation accuracy: 1.0000
+Epoch [7/10], Validation loss: 0.0336, Validation accuracy: 1.0000
+Epoch [8/10], Validation loss: 0.0114, Validation accuracy: 1.0000
+Epoch [9/10], Validation loss: 0.1287, Validation accuracy: 0.9994
+Epoch [10/10], Validation loss: 0.2713, Validation accuracy: 0.9981
+===================================
+evaluate_model function results:
+===================================
+Evaluation at the train set:
+              precision    recall  f1-score   support
+
+         0.0       1.00      1.00      1.00      2115
+         1.0       1.00      1.00      1.00      2184
+         2.0       1.00      1.00      1.00      2101
+
+    accuracy                           1.00      6400
+   macro avg       1.00      1.00      1.00      6400
+weighted avg       1.00      1.00      1.00      6400
+
+Accuracy: 0.9989
+Precision: 0.9989
+Recall: 0.9989
+F1 Score: 0.9989
+[[2115    0    0]
+ [   7 2177    0]
+ [   0    0 2101]]
+Evaluation at the test set
+              precision    recall  f1-score   support
+
+         0.0       0.99      1.00      1.00       661
+         1.0       1.00      0.99      1.00       682
+         2.0       1.00      1.00      1.00       657
+
+    accuracy                           1.00      2000
+   macro avg       1.00      1.00      1.00      2000
+weighted avg       1.00      1.00      1.00      2000
+
+Accuracy: 0.9975
+Precision: 0.9975
+Recall: 0.9975
+F1 Score: 0.9975
+[[661   0   0]
+ [  5 677   0]
+ [  0   0 657]]
