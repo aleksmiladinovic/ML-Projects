@@ -1,3 +1,1 @@
-Shape classifier contains an algorithm that classifies a shape on a given image.
-The input consists of images, each one containing a picture of a shape most similar to one of
-the three basic shapes: rectangle, circle (or ellipse) and a triangle.
+Shape classifier contains an algorithm that classifies a shape of a given image using a convolutive neural network. The input consists of images, each one containing a picture of a shape most similar to one of the three basic shapes: rectangle, circle (or ellipse) and a triangle. This data is stored in multiple files: the images are tored in files 'data[number].aca', while the corresponding shapes are stored in files 'data description[number].aca'. The data files are stored with the number of pictures followed by their size, after which the images are stored as arrays. 
