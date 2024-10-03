@@ -244,18 +244,16 @@ def evaluate_model(model, data_loader):
         for inputs, labels in data_loader:
             inputs, labels = inputs.to(device), labels.to(device)
             originals = torch.argmax(labels, dim=1)
-            #originals = labels.squeeze()
             y_test = np.append(y_test, originals.numpy())
             output = model(inputs)
             predicted = torch.argmax(output.squeeze(), dim=1)
-            #predicted = output.squeeze()
             y_predicted = np.append(y_predicted, predicted.numpy())
 
     print(metrics.classification_report(y_test, y_predicted))
 
     accuracy = metrics.accuracy_score(y_test, y_predicted)
     precision, recall, f1_score, _ = metrics.precision_recall_fscore_support(y_test, y_predicted, average='weighted')
-    #print(f'Model evaluation on: {loader}')
+    
     print(f"Accuracy: {accuracy:.4f}")
     print(f"Precision: {precision:.4f}")
     print(f"Recall: {recall:.4f}")
