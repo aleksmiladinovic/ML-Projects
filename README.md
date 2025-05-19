@@ -9,3 +9,4 @@ The idea behind the creation of this repository is to store projects with intere
 2. Chess ELO Estimator
 3. Movie Recommendation System
 4. Car Price Estimator
+5. Movies AI Agent
